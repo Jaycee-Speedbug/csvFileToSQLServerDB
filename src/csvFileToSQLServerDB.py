@@ -20,3 +20,20 @@
 #   Jaycee
 #
 
+
+from WildLife import *
+import sys
+
+
+def main():
+    """Start point of csvFileToSQLServerDB"""
+    print ("")
+    print ("Arguments de la ligne de commande :")
+    print ("")
+    for argument in sys.argv:
+        print(argument)
+
+
+if __name__ == '__main__':
+    main()
+

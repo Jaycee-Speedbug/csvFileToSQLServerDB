@@ -1,3 +1,4 @@
+#!/usr/bin/python3 
 #
 #   Fichier de définition des constantes
 #

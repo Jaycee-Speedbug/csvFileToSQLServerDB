@@ -47,6 +47,7 @@ class MapCell:
     def changeBiome(self,biome):
         if biome < 0:
             biome = cst.DEFAULT_BIOME
+            biome = 
         _biome = biome
 
 
