@@ -1,3 +1,5 @@
+#!/usr/bin/python3 
+#
 #
 #   
 #   Programme Console traitant un fichier dont le path\filename sont passés en argument de la ligne de commande pour nourir une base de données

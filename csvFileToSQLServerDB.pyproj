@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>3753361d-c461-4f95-88a1-0f0f1df7bdec</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>csvFileToSQLServerDB.py</StartupFile>
+    <StartupFile>src\csvFileToSQLServerDB.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,13 +21,29 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="WildLifeMap.py">
+    <Compile Include="src\WildLife\__init__.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MapCell.py">
+    <Compile Include="src\WildLife\wildlifeconst.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="csvFileToSQLServerDB.py" />
+    <Compile Include="src\WildLife\test_WildLifeMap.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\WildLife\WildLifeMap.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\WildLife\MapCell.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\csvFileToSQLServerDB.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\" />
+    <Folder Include="src\WildLife\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
