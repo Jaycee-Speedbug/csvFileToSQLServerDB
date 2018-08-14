@@ -11,10 +11,13 @@
 #
 
 DEFAULT_CONSTANT = 1
+DEFAULT_BIOME = 1
+DEFAULT_HUMIDITY = 0
+DEFAULT_VEGETATION = 0
+MAP_MAX_HEIGHT = 1000
+MAP_MAX_WIDTH = 1000
+MAP_NAME_MAX_LEN = 15
 
-class cst:
 
-    DEFAULT_BIOME = 1
-
-    def __init__(self):
-        pass
+def __init__(self):
+    pass

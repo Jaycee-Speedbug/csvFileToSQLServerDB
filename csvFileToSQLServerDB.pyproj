@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>3753361d-c461-4f95-88a1-0f0f1df7bdec</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>src\csvFileToSQLServerDB.py</StartupFile>
+    <StartupFile>src\WildLife\test_WildLifeMap.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
