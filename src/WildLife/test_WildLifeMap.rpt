@@ -1,0 +1,9 @@
+Nom de la carte crée: carte de test__XXX
+Width: 3
+Height: 3
+Size: <bound method WildLifeMap.mapSize of <WildLifeMap.WildLifeMap object at 0x0043FF10>>
+
+TEST 1 FAIL
+TEST 2 OK
+TEST 3 OK
+TEST 4 FAIL

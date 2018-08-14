@@ -21,7 +21,7 @@
 #
 
 
-from WildLife import *
+from WildLife.WildLifeMap import *
 import sys
 
 
