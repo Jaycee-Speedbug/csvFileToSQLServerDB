@@ -10,44 +10,66 @@ from wildlifeconst import *
 
 
 class MapCell:
-    """Documentation"""
+    """
+    Cellule de carte de jeu WildLife
+    """
 
+
+
+    # Niveau d'humidité de la cellule
     _humidity = -1
-    _vegetation = -1
-    _biome = -1
 
-
-
-    def humidity(self, humidity):
+    def setHumidity(self, humidity):
+        """setter"""
         if humidity < 0:
             humidity = 0
         if humidity > 100:
             humidity = 100
         self._humidity = humidity
 
+    def humidity(self):
+        """getter"""
+        return self._humidity
 
 
-    def vegetation(self, vegetation):
+
+    # Niveau de végétation de la cellule
+    _vegetation = -1
+
+    def setVegetation(self, vegetation):
+        """setter"""
         if vegetation < 0:
             vegetation = 0
         if vegetation > 100:
             vegetation = 100
         self._vegetation = vegetation
 
+    def vegetation(self):
+        """getter"""
+        return self._vegetation
 
+    # Biome de la cellule
+    _biome = -1
 
-    def biome(self, biome):
+    def setBiome(self, biome):
+        """setter"""
         if biome < 0:
             biome = DEFAULT_BIOME
         self._biome = biome
 
+    def biome(self):
+        """getter"""
+        return self._biome
+
 
 
     def __init__(self, biome, humidity, vegetation):
-        """Initialisation d'une cellule de carte"""
-        self.humidity(humidity)
-        self.vegetation(vegetation)
-        self.biome(biome)
+        """
+        Construction d'une cellule de carte
+        """
+        self.setHumidity(humidity)
+        self.setVegetation(vegetation)
+        self.setBiome(biome)
         
 
 

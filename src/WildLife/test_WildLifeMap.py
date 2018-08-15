@@ -1,6 +1,7 @@
 #
-# Simple test of the classes WildLifeMap and MapCell
+# Fonction regroupant les tests des classes WildLifeMap et MapCell
 #
+# Il y a des appels à des champs 'privés' des classes de WildLifeMap pour les besoins des tests, quand les getters n'ont pas été codés
 #
 
 
@@ -15,12 +16,6 @@ def test():
     # Define a  map 3 x 3
     map = WildLifeMap("carte de test__XXX",3,3)
 
-    print("Nom de la carte créée: " + map._name)
-    print("Width: " + str(map._width))
-    print("Height: " + str(map._height))
-    print("Size: " + str(map.mapSize()))
-    print("")
-
     # First row
     map.addCell(0,0,1,50,30)
     map.addCell(0,1,1,51,31)
@@ -34,10 +29,18 @@ def test():
     map.addCell(2,1,1,72,51)
     map.addCell(2,2,1,73,52)
 
+    print("")
+    print("Vegetation")
+    for cell in map._cells:
+        print(cell.vegetation())
+
+
+
+    ################################################   TESTS   ################################################
 
     # Test 1 - Try to read a Cell
     testCell = map.getCellAt(0,0)
-    if map.getCellAt(0,0)._vegetation == 30:
+    if map.getCellAt(0,0).vegetation() == 30:
         print("TEST 1 OK")
     else:
         print("TEST 1 FAIL")
@@ -54,17 +57,31 @@ def test():
     else:
         print("TEST 3 OK")
 
-
     # Test 4 - Map name should be a 15 chars len string
-    if len(map._name) > MAP_NAME_MAX_LEN:
+    if len(map.name()) > MAP_NAME_MAX_LEN:
         print("TEST 4 FAIL")
     else:
         print("TEST 4 OK")
 
-    print("")
-    print("Vegetation")
-    for cell in map._cells:
-        print(cell._vegetation)
+    # Test 5 - Map width test
+    if map._width == 3:
+        print("TEST 5 OK")
+    else:
+        print("TEST 5 FAIL")
+
+    # Test 6 - Map height test
+    if map._height == 3:
+        print("TEST 6 OK")
+    else:
+        print("TEST 6 FAIL")
+
+    # Test 7 - Map width test
+    if map.mapSize() == 9:
+        print("TEST 7 OK")
+    else:
+        print("TEST 7 FAIL")
+
+
 
 
 

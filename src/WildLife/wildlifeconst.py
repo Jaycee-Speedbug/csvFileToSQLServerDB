@@ -19,5 +19,6 @@ MAP_MAX_WIDTH = 1000
 MAP_NAME_MAX_LEN = 15
 
 
+# Pas d'exécution de ce code, uniquement des définitions
 def __init__(self):
     pass

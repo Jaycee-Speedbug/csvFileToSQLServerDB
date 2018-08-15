@@ -18,6 +18,21 @@ class WildLifeMap:
     # Liste des cellules de la carte de jeu
     _cells = []
 
+    # Nom de la carte
+    _name = ""
+
+    def name(self):
+        """getter"""
+        return self._name
+
+    # Largeur de la carte
+    _width = -1
+
+    # Hauteur de la carte
+    _height = -1
+
+
+
     def __init__(self, mapName, mapHeight, mapWidth):
         """
         Constructeur de la carte
@@ -60,9 +75,9 @@ class WildLifeMap:
         
         targetCell = self._cells[ x + y * self._width]
 
-        targetCell.biome(biome)
-        targetCell.humidity(humidity)
-        targetCell.vegetation(vegetation)
+        targetCell.setBiome(biome)
+        targetCell.setHumidity(humidity)
+        targetCell.setVegetation(vegetation)
         return True
 
 
@@ -70,11 +85,13 @@ class WildLifeMap:
     def getCellAt(self, x, y):
         """
         Retourne une copie de la cellule à la position x,y
+        Les coordonnées (x,y) de la cellule commencent à 0
         """
         index = x + y * self._width
-        targetCell = MapCell(self._cells[index]._biome, self._cells[index]._humidity, self._cells[index]._vegetation)
+        return MapCell(self._cells[index].biome(), self._cells[index].humidity(), self._cells[index].vegetation())
 
-        return targetCell
+
+
 
 
 
