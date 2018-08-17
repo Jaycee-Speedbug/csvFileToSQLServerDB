@@ -30,9 +30,10 @@ def test():
     map.addCell(2,2,1,73,52)
 
     print("")
-    print("Vegetation")
-    for cell in map._cells:
-        print(cell.vegetation())
+    
+    #print("Vegetation")
+    #for cell in map._cells:
+    #    print(cell.vegetation)
 
 
 
@@ -40,7 +41,7 @@ def test():
 
     # Test 1 - Try to read a Cell
     testCell = map.getCellAt(0,0)
-    if map.getCellAt(0,0).vegetation() == 30:
+    if map.getCellAt(0,0).vegetation == 30:
         print("TEST 1 OK")
     else:
         print("TEST 1 FAIL")
@@ -58,19 +59,19 @@ def test():
         print("TEST 3 OK")
 
     # Test 4 - Map name should be a 15 chars len string
-    if len(map.name()) > MAP_NAME_MAX_LEN:
+    if len(map.name) > MAP_NAME_MAX_LEN:
         print("TEST 4 FAIL")
     else:
         print("TEST 4 OK")
 
     # Test 5 - Map width test
-    if map._width == 3:
+    if map.width == 3:
         print("TEST 5 OK")
     else:
         print("TEST 5 FAIL")
 
     # Test 6 - Map height test
-    if map._height == 3:
+    if map.height == 3:
         print("TEST 6 OK")
     else:
         print("TEST 6 FAIL")
