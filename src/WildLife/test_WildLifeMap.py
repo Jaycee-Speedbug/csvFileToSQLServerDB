@@ -1,7 +1,10 @@
+#!/usr/bin/python3 
 #
-# Fonction regroupant les tests des classes WildLifeMap et MapCell
+# Module regroupant les fonctions de tests unitaires des classes:
+#   WildLifeMap
+#   MapCell
 #
-# Il y a des appels à des champs 'privés' des classes de WildLifeMap pour les besoins des tests, quand les getters n'ont pas été codés
+# Il peu y avoir des appels à des champs 'privés', pour les besoins des tests, quand les getters n'ont pas été codés
 #
 
 

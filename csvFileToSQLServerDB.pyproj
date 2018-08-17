@@ -21,6 +21,15 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="src\DatabaseConnect\SQLServerConnector.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\DatabaseConnect\test_SQLServerConnector.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\DatabaseConnect\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="src\WildLife\CellBiome.py">
       <SubType>Code</SubType>
     </Compile>
@@ -46,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="src\" />
+    <Folder Include="src\DatabaseConnect\" />
     <Folder Include="src\WildLife\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
