@@ -15,21 +15,39 @@ class WildLifeMap:
     Objet modélisant une carte de jeu WildLife
     """
 
+
+
     # Liste des cellules de la carte de jeu
     _cells = []
 
-    # Nom de la carte
-    _name = ""
 
-    def name(self):
+
+    # Nom de la carte
+    def _get_name(self):
         """getter"""
         return self._name
 
-    # Largeur de la carte
-    _width = -1
+    def _set_name(self, mapName):
+        """setter"""
+        self._name = mapName[:MAP_NAME_MAX_LEN]
 
-    # Hauteur de la carte
-    _height = -1
+    name = property(_get_name, _set_name)
+
+
+
+    # Largeur de la carte READ ONLY
+    @property
+    def width(self):
+        """getter"""
+        return self._width
+
+
+
+    # Hauteur de la carte READ ONLY
+    @property
+    def height(self):
+        """getter"""
+        return self._height
 
 
 
@@ -47,7 +65,7 @@ class WildLifeMap:
             mapWidth = MAP_MAX_WIDTH
         self._width = mapWidth
 
-        self._name = mapName[:MAP_NAME_MAX_LEN]
+        self.name = mapName
         
         # Création de la liste contenant toutes les cellules de la carte
         for index in range(1,1 + mapHeight * mapWidth):
@@ -75,9 +93,9 @@ class WildLifeMap:
         
         targetCell = self._cells[ x + y * self._width]
 
-        targetCell.setBiome(biome)
-        targetCell.setHumidity(humidity)
-        targetCell.setVegetation(vegetation)
+        targetCell.biome = biome
+        targetCell.humidity = humidity
+        targetCell.vegetation = vegetation
         return True
 
 
@@ -88,7 +106,7 @@ class WildLifeMap:
         Les coordonnées (x,y) de la cellule commencent à 0
         """
         index = x + y * self._width
-        return MapCell(self._cells[index].biome(), self._cells[index].humidity(), self._cells[index].vegetation())
+        return MapCell(self._cells[index].biome, self._cells[index].humidity, self._cells[index].vegetation)
 
 
 

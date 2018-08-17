@@ -17,9 +17,7 @@ class MapCell:
 
 
     # Niveau d'humidité de la cellule
-    _humidity = -1
-
-    def setHumidity(self, humidity):
+    def _set_humidity(self, humidity):
         """setter"""
         if humidity < 0:
             humidity = 0
@@ -27,16 +25,16 @@ class MapCell:
             humidity = 100
         self._humidity = humidity
 
-    def humidity(self):
+    def _get_humidity(self):
         """getter"""
         return self._humidity
+
+    humidity = property(_get_humidity, _set_humidity)
 
 
 
     # Niveau de végétation de la cellule
-    _vegetation = -1
-
-    def setVegetation(self, vegetation):
+    def _set_vegetation(self, vegetation):
         """setter"""
         if vegetation < 0:
             vegetation = 0
@@ -44,22 +42,26 @@ class MapCell:
             vegetation = 100
         self._vegetation = vegetation
 
-    def vegetation(self):
+    def _get_vegetation(self):
         """getter"""
         return self._vegetation
 
-    # Biome de la cellule
-    _biome = -1
+    vegetation = property(_get_vegetation, _set_vegetation)
 
-    def setBiome(self, biome):
+
+
+    # Biome de la cellule
+    def _set_biome(self, biome):
         """setter"""
         if biome < 0:
             biome = DEFAULT_BIOME
         self._biome = biome
 
-    def biome(self):
+    def _get_biome(self):
         """getter"""
         return self._biome
+
+    biomeDbID = property(_get_biome, _set_biome)
 
 
 
@@ -67,9 +69,9 @@ class MapCell:
         """
         Construction d'une cellule de carte
         """
-        self.setHumidity(humidity)
-        self.setVegetation(vegetation)
-        self.setBiome(biome)
+        self.humidity = humidity
+        self.vegetation = vegetation
+        self.biome = biome
         
 
 
