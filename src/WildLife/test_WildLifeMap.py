@@ -16,6 +16,9 @@ from wildlifeconst import *
 
 def test():
     
+    print("Tests on WildLife module")
+    print("")
+
     # Define a  map 3 x 3
     map = WildLifeMap("carte de test__XXX",3,3)
 
@@ -84,9 +87,6 @@ def test():
         print("TEST 7 OK")
     else:
         print("TEST 7 FAIL")
-
-
-
 
 
 
